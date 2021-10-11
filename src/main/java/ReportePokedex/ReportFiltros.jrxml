@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0997868-5c3c-4496-8d86-7cb6f4032bb7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="color" class="java.lang.String"/>
+	<field name="habitat" class="java.lang.String"/>
+	<field name="ratedecaptura" class="java.lang.String"/>
+	<field name="experienciabase" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="153" y="28" width="232" height="20" uuid="4c4b1807-d90d-4f1b-92dc-1952520784d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte filtro de pokemones]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="0" width="100" height="20" uuid="32ad6615-ed0b-4f7e-b2ff-b98fd08a78bb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Color:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="168" y="0" width="100" height="20" uuid="9bea0989-09ba-4c32-9ae0-06b89d5767ba"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{color}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="0" width="100" height="20" uuid="d5299bf6-cb8a-4410-bc4b-a4ce9778ec17"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Habitat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="100" height="20" uuid="ed00a816-98b5-4dde-bec2-ff4e3a33ccd0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rate de captura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="0" width="100" height="20" uuid="84f7a47f-0658-4f3d-88ed-93dc941b14c9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Experiencia Base]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="0" width="100" height="20" uuid="b15e9fb4-aeea-4b42-9ece-1903f5db2a36"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{habitat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="100" height="20" uuid="4800dba4-0878-48a2-ae04-648ba5277952"/>
+				<textFieldExpression><![CDATA[$F{ratedecaptura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="0" width="100" height="20" uuid="dcbf5a10-eff5-4bae-b806-e8ea882be902"/>
+				<textFieldExpression><![CDATA[$F{experienciabase}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="26" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="22" width="100" height="20" uuid="bce03c25-e995-49de-8f45-ce7bd50780f2"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
